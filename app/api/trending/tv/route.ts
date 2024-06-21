@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiResponse } from "next";
 import { NextResponse } from "next/server";
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET( res: NextApiResponse) {
   const token: any =process.env.MOVIEDBAPIKEY;
   try {
     const response = await fetch(
