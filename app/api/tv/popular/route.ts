@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 export async function GET(req: NextApiRequest, res: NextApiResponse) {
-  const token: string = "5532a84479c2fcd0e6f9cfd297028a8b";
+    const token: any =process.env.MOVIEDBAPIKEY;
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/tv/popular?language=en-US&page=1&region=in&api_key=${token}`
